@@ -13,4 +13,4 @@ Adobe XDのデザインデータをもとに、架空の英語塾サイトのHTM
 ・カスタムフィールド(Advanced Custom Fields)  
 ・カスタム投稿
   
- <img src="https://user-images.githubusercontent.com/73923419/153809481-497594d7-3f36-47cf-b3ff-2d6ff7d55cb4.png" width="300px">
+ <img src="https://user-images.githubusercontent.com/73923419/165198355-84d86b40-5bdc-46ba-a7f8-63e44cab9442.png" width="300px">
