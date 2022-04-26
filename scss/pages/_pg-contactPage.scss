@@ -1,0 +1,153 @@
+/*=====================================
+contactPage（お問い合わせページ）
+======================================*/
+.pg-contactPage {
+    & .container {
+        margin: 58px 0 82px;
+    }
+    & .desc {
+        line-height: 1.31;
+        margin-bottom: 45px;
+    }
+    & .form {
+        & .error {
+            display: block;
+            color: tomato;
+            margin-top: 5px;
+        }
+        & .label {
+            display: block;
+        }
+        & .ttl {
+            display: block;
+            line-height: 1.31;
+            margin-bottom: 10px;
+        }
+        & .inputFrame {
+            width: 100%;
+            border: 1px solid rgba(27, 34, 76, .5);
+            padding: 16px 20px;
+            &::placeholder {
+                color: #b4b4b4;
+                font-size: 1.2rem;
+            }
+        }
+        &__text {
+            &:not(:last-of-type) {
+                margin-bottom: 16px;
+            }
+            &:nth-of-type(4) {
+                margin-bottom: 20px;
+            }
+        }
+        &__radio {
+            margin-bottom: 20px;
+            & .txt {
+                line-height: 1.31;
+                margin-bottom: 16px;
+                & span {
+                    font-weight: bold;
+                    @include mq-down(sm) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            //ラジオボタンはWM WP Formで生成されたclassに設定
+            & .mwform-radio-field{
+                display: block;
+                &:not(:last-of-type) {
+                    margin-bottom: 12px;
+                }
+            }
+            & input[type=radio] {
+                appearance: none;
+                display: none;
+            }
+            & input[type=radio] + span {
+                position: relative;
+                display: inline-block;
+                padding-left: 30px;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+            & input[type=radio] + span:before {
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: $color-white;
+                border: 1px solid #707070;
+                margin-right: 20px;
+            }
+            & input[type=radio]:checked + span::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 4px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: $color_base;
+            }
+        }
+        &__textArea {
+            margin-bottom: 28px;
+        }
+        &__privacyPolicy {
+            &__txt {
+            text-align: center;
+            line-height: 1.31;
+            margin-bottom: 28px;
+            }
+            &__link {
+                color: $color_point;
+                text-decoration: underline;
+            }
+            &__checkbox {
+                text-align: center;
+                & input[type=checkbox] {
+                    appearance: none;
+                    display: none;
+                }
+                & input[type=checkbox] + span {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 35px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+                & input[type=checkbox] + span:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #070707;
+                    margin-right: 15px;
+                }
+                & input[type=checkbox]:checked + span::after {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 16px;
+                    border-bottom: 3px solid $color_base;
+                    border-right: 3px solid $color_base;
+                    left: 5px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        &__btn {
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            line-height: 50px;
+            margin: 46px auto 0;
+        }
+    }
+}

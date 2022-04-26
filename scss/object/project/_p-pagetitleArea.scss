@@ -1,0 +1,33 @@
+.p-pagetitleArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--plan {
+        background-image: url('../images/plan.jpg');
+    }
+    &--blog {
+        background-image: url('../images/blog.jpg');
+    }
+    &--news {
+        background-image: url('../images/news.jpg');
+    }
+    &--contact {
+        background-image: url('../images/cta.jpg');
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: $color_white;
+        @include mq-down(md) {
+            font-size: 2.2rem;
+        }
+    }
+    &__container {
+        margin-top: 58px;
+    }
+}

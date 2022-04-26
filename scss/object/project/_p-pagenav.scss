@@ -1,0 +1,35 @@
+.p-pagenav {
+    & .screen-reader-text {
+        display: none;
+    }
+    & .nav-links {
+        text-align: center;
+        & *:not(:last-child) {
+            margin-right: 10px;
+            @include mq-up(sm) {
+                margin-right: 20px;
+            }
+        }
+    }
+    & .page-numbers {
+        display: inline-block;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid $color_base;
+        @include mq-up(sm) {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+        &.current {
+            background: $color_base;
+            color: $color_white;
+        }
+        &.dots {
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.l-header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    background: $color_white;
+    box-shadow: 2px 2px 4px $color_gray--slightlyBright;
+    @include mq-up(md) {
+        height: 80px;
+    }
+    &__inner {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    /* （左ブロック）ロゴやナビゲーション */
+    &__left {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        width: 120px;
+        margin-right: 28px;
+        @include mq-up(md) {
+            width: 136px;
+        }
+    }
+    &__nav {
+        height: 100%;
+        & .globalnav_wrap {
+            height: 100%;
+        }
+        @include mq-down(lg) {
+            display: none;
+        }
+    }
+    &__menu {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__li {
+        position: relative;
+        height: 100%;
+        font-weight: bold;
+        &:not(:last-child) {
+            margin-right: 38px;
+            @include mq-down(xl) {
+                margin-right: 20px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 16px;
+            width: 100%;
+            height: 3px;
+            background: $color_base;
+            visibility: hidden;
+        }
+        &:hover {
+            &.l-header__li::after {
+                visibility: visible;
+            }
+        }
+        &__link { /*aタグを親いっぱいにひろげて中央配置*/
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    /* （右ブロック）ボタンエリア */
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+    &__info {
+        @include mq-down() {
+            display: none;
+        }
+        margin-right: 24px;
+        text-align: right;
+        &__time {
+            display: block;
+            font-size: 1.2rem;
+            line-height: 1.31;
+            margin-top: 8px;
+        }
+        &__phone {
+            display: block;
+            font-weight: bold;
+            margin-top: 8px;
+            &::before {
+                background: url('../images/phone1.png') no-repeat;
+                background-size: cover;
+            }
+        }
+        &--sp { /*スマホ用電話ボタン*/
+            display: none;
+            @include mq-down() {
+                display: block;
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px solid #e5e5e5;
+                box-shadow: 3px 3px #e5e5e5;
+                margin-right: 18px;
+                & a {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            & img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    &__btn {
+        width: 137px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-right: 10px;
+        @include mq-down(md) {
+            display: none;
+        }
+    }
+}

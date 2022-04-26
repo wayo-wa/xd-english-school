@@ -1,0 +1,19 @@
+.p-heading {
+    line-height: 1.5;
+    font-weight: bold;
+    &--m {
+        font-size: 2.2rem;
+        @include mq-up(md) {
+            font-size: 2.6rem;
+        }
+    }
+    &--s {
+        font-size: 1.8rem;
+        position: relative;
+        border-left: 4px solid $color_base;
+        padding-left: 10px;
+        @include mq-up(md) {
+            font-size: 2.2rem;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+/*=====================================
+single-newsPage（お知らせ投稿ページ）
+======================================*/
+.pg-single-newsPage {
+    & .container {
+        margin: 60px 0 53px;
+    }
+    & .header {
+        position: relative;
+        margin-bottom: 58px;
+        &__ttl {
+            font-size: 2.2rem;
+            font-weight: bold;
+            line-height: 1.32;
+            padding-bottom: 11.9%;
+            @include mq-up(md) {
+                font-size: 2.8rem;
+            }
+        }
+        & time {
+            position: absolute;
+            display: inline-block;
+            bottom: 0;
+            right: 0;
+            line-height: 1.31;
+        }
+    }
+    & .news-main {
+        & .heading {
+            &--m {
+                margin: 58px 0 20px;
+            }
+            &--s {
+                margin: 37px 0 27px;
+            }
+        }
+        & .txt {
+            line-height: 1.5;
+        }
+        & blockquote {
+            position: relative;
+            background: $color_gray--light;
+            padding: 22px 20px 22px 56px;
+            margin: 30px 0;
+            @include mq-up(md) {
+                padding: 22px 26px 22px 74px;
+                margin: 60px 0 30px;
+            }
+            &::before {
+                content: '“';
+                position: absolute;
+                font-size: 6rem;
+                top: 16px;
+                left: 16px;
+                color: $color_gray--littleDark;
+                @include mq-up(md) {
+                    top: 18px;
+                    left: 17px;
+                    font-size: 9rem;
+                }
+    
+            }
+        }
+        & .insert-img {
+            width: 100%;
+            height: auto;
+            @include mq-up(md) {
+                width: 400px;
+                height: 250px;
+            }
+        }
+        & .list-menu {
+            line-height: 1.5;
+            margin: 30px 0 75px;
+        }
+        & .list-item { 
+            position: relative;
+            padding-left: 20px;
+            @include mq-up(md) {
+                padding-left: 40px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 11px;
+                height: 11px;
+                background: $color_point;
+                border-radius: 50%;
+            }
+        }
+        & .text-link { 
+            font-size: 1.8rem;
+            line-height: 1.33;
+            color: $color_point;
+        }
+
+    }
+}

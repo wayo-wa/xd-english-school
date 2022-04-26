@@ -1,0 +1,19 @@
+.l-site {
+    &__inner {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+        @include mq-up(sm) {
+            padding: 0 20px;
+        }
+        @include mq-up(md) {
+            padding: 0 36px;
+        }
+        &--min {
+            max-width: 772px;
+        }
+        &--primary {
+            max-width: 972px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.pg-404Page {
+    text-align: center;
+    & .inner {
+        padding: 130px 0;
+    }
+    & .notfound__ttl {
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    & .notfound__txt {
+        line-height: 1.33;
+    }
+}

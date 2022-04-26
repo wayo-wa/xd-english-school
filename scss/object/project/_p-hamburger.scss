@@ -1,0 +1,56 @@
+.p-hamburger {
+    @include mq-down() {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background: $color_base;
+        cursor: pointer;
+        transition: all .3s;
+    }
+}
+
+.p-hamburger__line {
+    display: block;
+    position: absolute;
+    top: -14px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 18px;
+    height: 2px;
+    background: $color_white;
+    color: $color_white;
+    border-radius: 15px;
+    transition: inherit;
+}
+
+.p-hamburger__name {
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    font-size: 1rem;
+    color: $color_white;
+    text-align: center;
+}
+
+.p-hamburger__line::before,
+.p-hamburger__line::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transition: all .3s;
+}
+
+.p-hamburger__line::before {
+    top: -5px;
+}
+
+.p-hamburger__line::after {
+    top: 5px;
+}

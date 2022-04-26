@@ -1,0 +1,6 @@
+.l-main {
+    padding-top: 70px;
+    @include mq-up(md) {
+        padding-top: 80px;
+    }
+}

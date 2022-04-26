@@ -1,0 +1,10 @@
+.c-phone {
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}

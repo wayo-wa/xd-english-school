@@ -1,0 +1,17 @@
+.p-hamburger.is-active {
+    & .p-hamburger__line {
+        background: transparent;
+    }
+    & .p-hamburger__line::before,
+      .p-hamburger__line::after {
+          top: 0;
+          background: $color_white;
+          transition: all .3s;
+      }
+    & .p-hamburger__line::before {
+        transform: rotate(45deg);
+    }
+    & .p-hamburger__line::after {
+        transform: rotate(-45deg);
+    }
+}

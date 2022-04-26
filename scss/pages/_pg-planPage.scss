@@ -1,0 +1,161 @@
+/*=====================================
+planPage（料金体系ページ）
+======================================*/
+.pg-planPage {
+    & .container {
+        padding: 58px 0 62px;
+    }
+    & .system {
+        margin-bottom: 60px;
+        @include mq-up(md) {
+            margin-bottom: 110px;/*デザインカンプは90px*/
+        }
+        &__main {
+            display: flex;
+            justify-content: space-between;
+            max-width: 656px;
+            margin: 46px auto;
+        }
+        &__parts {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+            @include mq-down(sm) {
+                flex-direction: column;
+            }
+            @include mq-up(sm) {
+                font-size: 2.2rem;
+            }
+        }
+        &__box {
+            width: 42.9%;
+            padding: 12px 0;
+            color: $color_white;
+            background: $color_base;
+            border: 1px solid $color_base;
+            @include mq-up(sm) {
+                padding: 33px 0;
+            }
+        }
+        & .adjusted {
+            margin-right: 10px;
+            @include mq-down(sm) {
+                margin: 0 0 8px 0;
+            }
+        }
+        &__plus {
+            position: relative;
+            width: 15%;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 2px;
+                background: $color_base;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 19px;
+                background: $color_base;
+            }
+        }
+        &__txt {
+            line-height: 1.31;
+            @include mq-down(sm) {
+                font-size: 1.4rem;
+                line-height: 1.5;
+            }
+        }
+    }
+    & .price {
+        &__container {
+            margin-top: 58px;
+        }
+        &__menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+        &__li {
+            list-style: none;
+            @include mq-down(xs) {
+                width: 99%;
+                flex-shrink: 0;
+            }
+            @include mq-up(xs) {
+                width: 220px;
+            }
+            &:not(:last-of-type) {
+                margin-right: 8px;
+            }
+            &__body {
+                height: 380px;
+                padding-top: 30px;
+                border: 1px solid rgba(27, 34, 76, .5);
+                border-top: none;
+                @include mq-up(md) {
+                    height: 414px;
+                }
+            }
+            &__ttl {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-weight: bold;
+                color: $color_white;
+                height: 60px;
+                background: $color_base;
+                &--best {
+                    height: 96px;
+                    background: $color_point;
+                    line-height: 2.1;
+                }
+            }
+            &__fee {
+                font-size: 2.5rem;
+                font-weight: bold;
+                line-height: 1.6;
+                text-align: center;
+                margin-bottom: 10px;
+                &--best {
+                    color: $color_point;
+                }
+            }
+            &__tax {
+                text-align: center;
+                margin-bottom: 42px;
+                line-height: 1.31;
+            }
+        }
+        &__desc {
+            padding: 0 22px;
+            &__li {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 18px;
+                line-height: 1.31;
+                letter-spacing: -0.1em;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    display: inline-block;
+                    width: 15px;
+                    height: 10px;
+                    border-bottom: 3px solid $color_base;
+                    border-left: 3px solid $color_base;
+                    transform: rotate(-45deg);
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}

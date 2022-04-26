@@ -1,0 +1,90 @@
+/*=====================================
+archive-blogPage（ブログ一覧ページ）
+======================================*/
+.pg-archive-blogPage {
+    & .container {
+        padding: 58px 0 45px;
+    }
+    & .blog {
+        &__menu {
+            margin: 45px 0 114px;
+            @include mq-down() {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+        &__item {
+            @include mq-down() {
+                width: 48%;
+                flex-direction: column;
+            }
+            @include mq-down(md) {
+                width: 100%;
+            }
+            &:not(:last-of-type) {
+                margin-bottom: 32px;
+                @include mq-up(md) {
+                    margin-bottom: 40px;
+                }
+                @include mq-up() {
+                    margin-bottom: 60px;
+                }
+            }
+            &:hover {
+                & .blog__ttl {
+                    text-decoration: none;
+                }
+            }
+        }
+        &__cat {
+            position: absolute;
+            width: 80px;
+            height: 28px;
+            line-height: 28px;
+        }
+        &__img {
+            position: relative;
+            width: 100%;
+            @include mq-up() {
+                width: 240px;
+                margin-right: 50px;
+            }
+        }
+        &__thumb {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            padding-top: 75%;
+        }
+        &__time {
+            display: inline-block;
+            line-height: 1.81;
+            margin-bottom: 18px;
+            @include mq-down(md) {
+                font-size: 1.4rem;
+            }
+        }
+        &__ttl {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 1.33;
+            text-decoration: underline;
+            margin-bottom: 16px;
+            @include mq-up(md) {
+                font-size: 2rem;
+                line-height: 1.5;
+            }
+            @include mq-up(md) {
+                font-size: 2.6rem;
+            }
+        }
+        &__txt {
+            line-height: 1.5;
+            @include mq-down(md) {
+                font-size: 1.4rem;
+            }
+        }
+    }  
+}

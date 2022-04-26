@@ -1,0 +1,24 @@
+.c-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $color_white;
+    font-weight: bold;
+    transition: .3s;
+    &:hover {
+        letter-spacing: 0.05em;
+        transition: .3s;
+    }
+    &--point {
+        background: $color_point;
+        &:hover {
+            background: #f7b94e;
+        }
+    }
+    &--base {
+        background: $color_base;
+        &:hover {
+            background: #363e68;
+        }
+    }
+}

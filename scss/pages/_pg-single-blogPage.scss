@@ -1,0 +1,286 @@
+/*=====================================
+single-blogPage（ブログ投稿ページ）
+======================================*/
+.pg-single-blogPage {
+    & .container {
+        margin: 60px 0 72px;
+    }
+    & .wrap {
+        display: flex;
+        justify-content: space-between;
+        @include mq-down(md) {
+            flex-direction: column;
+        }
+    }
+    /*ブログ記事投稿エリア*/
+    & .blog-main {
+        width: 100%;
+        @include mq-up(md) {
+            width: 65.9%;
+        }
+        & .header {
+            margin-bottom: 22px;
+            &__cat {
+                width: 112px;
+                height: 30px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
+            &__ttl {
+                font-size: 2.2rem;
+                font-weight: bold;
+                line-height: 1.5;
+                margin-bottom: 30px;
+                @include mq-up(md) {
+                    font-size: 2.8rem;
+                    margin-bottom: 62px;
+                }
+            }
+            &__time {
+                display: block;
+                text-align: right;
+            }
+            &__bottom {
+                display: flex;
+                justify-content: space-between;
+                @include mq-down(xs) {
+                    flex-direction: column-reverse;
+                }
+            }
+            & .sns-btn {
+                display: flex;
+                color: $color_white;
+                text-align: center;
+                & li {
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    margin-right: 5px;
+                }
+                & .fb {
+                    background: $color_fasebook;
+                    &-like {
+                        width: 70px;
+                    }
+                    &-share {
+                        width: 44px;
+                    }
+                }
+                & .twitter {
+                    width: 70px;
+                    background: $color_twitter;
+                }
+            }
+        }
+        & .insert-img {
+            height: auto;
+            @include mq-up(md) {
+                width: 100%;
+                height: 370px;
+            }
+        }
+        & .heading {
+            &--m {
+                margin: 40px 0 20px;
+            }
+            &--s {
+                margin: 37px 0 27px;
+            }
+        }
+        & .txt {
+            line-height: 1.5;
+        }
+        & blockquote {
+            position: relative;
+            background: $color_gray--light;
+            padding: 22px 20px 22px 56px;
+            margin: 30px 0;
+            @include mq-up(md) {
+                padding: 22px 26px 22px 74px;
+                margin: 60px 0 30px;
+            }
+            &::before {
+                content: '“';
+                position: absolute;
+                font-size: 6rem;
+                top: 16px;
+                left: 16px;
+                color: $color_gray--littleDark;
+                @include mq-up(md) {
+                    top: 18px;
+                    left: 17px;
+                    font-size: 9rem;
+                }
+
+            }
+        }
+        & .list-menu {
+            line-height: 1.5;
+            margin: 30px 0;
+        }
+        & .list-item { 
+            position: relative;
+            padding-left: 20px;
+            @include mq-up(xs) {
+                padding-left: 40px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 11px;
+                height: 11px;
+                background: $color_point;
+                border-radius: 50%;
+            }
+        }
+        & .text-link { 
+            font-size: 1.8rem;
+            line-height: 1.33;
+            color: $color_point;
+        }
+        & .wp-block {
+            line-height: 2;
+        }
+        /*おすすめ記事*/
+        & .recommendArea {
+            margin-top: 86px;
+            @include mq-down(md) {
+                margin-bottom: 46px;
+            }
+            &__ttl {
+                font-size: 2.6rem;
+                font-weight: bold;
+                line-height: 1.5;
+                margin-bottom: 30px;
+            }
+            & .article-list {
+                &:not(:last-of-type) {
+                    margin-bottom: 28px;
+                }
+                &:hover {
+                    & .article-list__ttl {
+                        text-decoration: none;
+                    }
+                }
+                &__cat {
+                    position: absolute;
+                    width: 80px;
+                    height: 28px;
+                    line-height: 28px;
+                }
+                &__img {
+                    width: 100%;
+                    // height: auto;
+                    position: relative;
+                    @include mq-up(md) {
+                        width: 210px;
+                        // height: 128px;
+                    }
+                    @include mq-up(sm) {
+                        width: 35.5%;
+                        margin-right: 32px;
+                    }
+                }
+                &__thumb {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    padding-top: 70%;
+                }
+                & time {
+                    display: inline-block;
+                    margin-bottom: 27px;
+                    @include mq-down(sm) {
+                        margin: 12px 0 20px;
+                    }
+                }
+                &__ttl {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    line-height: 1.5;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    /*サイドバーエリア*/
+    & .blog-side {
+        width: 100%;
+        @include mq-up(md) {
+            width: 30%;
+        }
+        & .side-block {
+            &:first-of-type {
+                margin-bottom: 20px;
+            }
+            &__ttl {
+                width: 100%;
+                font-size: 1.8rem;
+                font-weight: bold;
+                text-align: center;
+                color: $color_white;
+                background: $color_base;
+                padding: 15px 0;
+                @include mq-up() {
+                    font-size: 2.1rem;
+                    padding: 21px 0;
+                }
+            }
+        }
+        & .side-block__article {
+            padding: 30px 0;
+        }
+        & .article-list {
+            &:not(:last-of-type) {
+                margin-bottom: 22px;
+                @include mq-up() {
+                    margin-bottom: 42px;
+                }
+            }
+            &__img {
+                width: 100%;
+                height: auto;
+                @include mq-up(sm) {
+                    width: 35%;
+                    margin-right: 17px;
+                }
+                @include mq-up(md) {
+                    width: 100px;
+                    height: 70px;
+                }
+            }
+            &__thumb {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                padding-top: 70%;
+            }
+            &__blogttl {
+                line-height: 2;
+                text-decoration: underline;
+                @include mq-up(md) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        & .widget-category ul  { //ウィジェットで生成された部分
+            padding: 27px 14px;
+            margin-left: 14px;
+            & .cat-item {
+                line-height: 2.4;
+                font-weight: bold;
+                list-style: disc;
+                & a {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}

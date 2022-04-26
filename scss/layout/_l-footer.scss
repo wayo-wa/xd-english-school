@@ -1,0 +1,143 @@
+.l-footer {
+    @include mq-down(md) {
+        padding-bottom: 36px;
+    }
+    &__main {
+        background: $color_base;
+        color: $color_white;
+        @include mq-up(md) {
+            padding: 35px 0 75px;
+        }
+        &__inner {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            @include mq-down(md) {
+                flex-direction: column;
+                justify-content: center;
+            }
+            @include mq-up(md) {
+                padding: 0 20px;
+            }
+        }
+    }
+    &__left {
+        display: flex;
+        @include mq-down(md) {
+            flex-direction: column;
+        }
+        @include mq-up(md) {
+            height: 23px;
+            margin-top: 10px;
+        }
+    }
+    &__li {
+        font-weight: bold;
+        text-align: center;
+        padding: 16px;
+        @include mq-down(md) {
+            font-size: 1.4rem;
+            border-bottom: 1px solid $color_gray--littleBright;
+        }
+        @include mq-up(md) {
+            line-height: 23px;
+            padding: 0 22px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        &:not(:last-of-type) {
+            @include mq-up(md) {
+                border-right: 1px solid $color_white;
+            }
+        }
+        & a {
+            display: block;
+        }
+        
+    }
+    &__right {
+        text-align: right;
+        @include mq-down(md) {
+            display: none;
+        }
+    }
+    &__logo {
+        display: block;
+        position: relative;
+        background: $color_white;
+        margin-bottom: 24px;
+        width: 200px;
+        height: 58px;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 30px;
+        }
+    }
+    &__phone {
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 10px;
+        &::before {
+            background-image: url("../images/phone2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    &__time {
+        font-size: 1.2rem;
+    }
+    &__copy {
+        display: flex;
+        align-items: center;
+        text-align: right;
+        padding: 12px 0;
+        & .copy {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+    &__under-nav {
+        @include mq-up(md) {
+            display: none;
+        }
+        padding-top: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        background: $color_white;
+        padding: 15px 10px;
+        border-top: 1px solid $color_base;
+        box-shadow: -1px -1px 1px $color_gray--slightlyBright;
+        &__li {
+            position: relative;
+            width: 33%;
+            text-align: center;
+            &:not(:last-of-type) {
+                border-right: 1px solid #dddddd;
+            }
+            & a {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+            }
+            & .img {
+                width: 20px;
+                padding-bottom: 8px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

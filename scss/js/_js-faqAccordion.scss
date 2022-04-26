@@ -1,0 +1,9 @@
+.pg-frontPage .faq__item__ques.is-open::after {
+   top: 25%;
+   opacity: 0;
+   transform: rotate(90deg);
+   transition: all .3s;
+}
+.pg-frontPage .faq__item__ans.is-open {
+   display: block;
+}
