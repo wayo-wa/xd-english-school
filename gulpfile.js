@@ -73,5 +73,4 @@ gulp.task('watch', function(){
     gulp.watch('./scss/**', gulp.series('sass'));//scss以下すべてのファイルをwatch
     gulp.watch('./css/src/*.css', gulp.series('mincss'));//css圧縮
     gulp.watch(paths.srcDir + '/*', gulp.series('imagemin'));//画像圧縮
-    // gulp.watch('./js/src/base.js', gulp.series('minjs'));//js圧縮
 });
