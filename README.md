@@ -1,5 +1,5 @@
 ## XDデザインカンプからのコーディングとWordPress構築  
-Adobe XDのデザインデータをもとに、架空のTOEFLEスクールのHTML/CSSコーディングとWordPress構築をしました。
+Adobe XDのデザインデータをもとに、架空のTOEFLE対策スクールのHTML/CSSコーディングとWordPress構築をしました。
   
 担当：コーディング、WordPress構築  
 使用技術：HTML, Sass(CSS), JavaScript (jQuery/gulp) ,WordPress  
