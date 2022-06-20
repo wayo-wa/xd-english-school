@@ -3,7 +3,7 @@ Adobe XDのデザインデータをもとに、架空の英語塾サイトのHTM
   
 担当：コーディング、WordPress構築  
 使用技術：HTML, Sass(CSS), JavaScript (jQuery/gulp) ,WordPress  
-デザインツール：XD  
+デザインツール：Adobe XD  
   
 ・アコーディオンメニュー  
 ・ハンバーガーメニュー    
