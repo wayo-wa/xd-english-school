@@ -2,13 +2,13 @@
 Adobe XDのデザインデータをもとに、架空のTOEFLE対策スクールのHTML/CSSコーディングとWordPress構築をしました。
   
 担当：コーディング、WordPress構築  
-使用技術：HTML, Sass(CSS), JavaScript (jQuery/gulp) ,WordPress  
+使用技術：HTML, CSS(SCSS), JavaScript (jQuery/gulp) ,WordPress  
 デザインツール：Adobe XD  
   
 ・アコーディオンメニュー  
 ・ハンバーガーメニュー    
 ・レスポンシブ対応    
-・お問い合わせフォーム(MW WP Form)   
+・お問い合わせフォーム(Contact Form 7)   
 ・パンくずリスト(breadcrumb navxt)    
 ・カスタムフィールド(Advanced Custom Fields)  
 ・カスタム投稿
