@@ -70,9 +70,7 @@ function load_google_cdn() {
         //GoogleのCDNのjQueryを出力
         wp_enqueue_script(
             'jquery',//scriptのハンドル名
-            /* local時だけhttp://から記述！！！！！！！！！ */
             'http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',//src
-            // 'ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',//src
             array(),//このscriptより前に読み込む必要があるscript
             '3.6.0',//バージョンがある
             true//footerに出力
@@ -87,23 +85,21 @@ add_action('wp_enqueue_scripts', 'load_google_cdn');
 function custom_enqueue_styles() {
     wp_enqueue_style(//自作のCSSファイル p148参照
         'base-style',
-        // get_stylesheet_uri(),//テーマ認識用のデフォルトcssファイル　←これいらない？
         get_template_directory_uri().'/css/app.min.css',//sassコンパイル＆css圧縮後のファイル
-        array(),// style.cssより先に読み込むCSSは無いので配列は空
-        null,//バージョン指定
-        'all'//p149参照
+        array(),
+        null,
+        'all'
     );
     wp_enqueue_style(//scroll-hintのCSSファイル
         'scroll-hint-style',
         'https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css',//CDNファイルのURL
-        array(),// style.cssより先に読み込むCSSは無いので配列は空
-        null,//バージョン指定
-        'all'//p149参照
+        array(),
+        null,
+        'all'
     );
     wp_enqueue_script(//自作のJaveScriptファイル読み込み
         'main-script',
         get_template_directory_uri().'/js/main.js',
-        // get_template_directory_uri().'/js/app.min.js',
         array('jquery'),//このscriptより前に読み込む必要があるscript
         null,
         true
